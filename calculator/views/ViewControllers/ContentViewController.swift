@@ -16,28 +16,31 @@ class ContentViewController: UIViewController {
         super.viewDidLoad()
         tblContent.delegate = self
         tblContent.dataSource = self
-       
-        
     }
     
-
-
+    @IBAction func goback_click(_ sender: Any) {
+            performSegue(withIdentifier: "segueBack", sender: self)
+    }
+    
+    func showDetails(){
+    }
 }
 
 
 extension ContentViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comicList.count
+        return marvelViewModelObj.MarvelData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let comic = comicList[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "contentcell") as! ContentTableViewCell
-        
-        cell.setupContent(comic: comic)
-        
+        cell.setupContent(title: marvelViewModelObj.MarvelData[indexPath.row].name)
         return cell
     }
+
+    
+    
+
 }

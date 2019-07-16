@@ -10,11 +10,18 @@
 		3BF2DA69428133E40BC7EA64 /* Pods_calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C71CB9A0D31D80BAD60A7 /* Pods_calculator.framework */; };
 		8B1FBC8622D16F1D0090F02E /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1FBC8522D16F1D0090F02E /* ContentViewController.swift */; };
 		8B1FBC8822D1737C0090F02E /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1FBC8722D1737C0090F02E /* ContentTableViewCell.swift */; };
+		8B3674DD22DD55C9001772F6 /* MarvelCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3674DC22DD55C9001772F6 /* MarvelCalculatorViewModel.swift */; };
 		8B84FD0322D10864001A17A1 /* StringHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84FD0222D10864001A17A1 /* StringHandlers.swift */; };
 		8B84FD0622D109D8001A17A1 /* RequestHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84FD0522D109D8001A17A1 /* RequestHandlers.swift */; };
 		8B84FD0822D10B9A001A17A1 /* WebServicesAddresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84FD0722D10B9A001A17A1 /* WebServicesAddresses.swift */; };
 		8B84FD0A22D119B9001A17A1 /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84FD0922D119B9001A17A1 /* Comics.swift */; };
-		8B84FD0C22D16887001A17A1 /* SessionVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84FD0B22D16887001A17A1 /* SessionVariable.swift */; };
+		8B84FD0C22D16887001A17A1 /* MarvelObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84FD0B22D16887001A17A1 /* MarvelObj.swift */; };
+		8B9108FE22D2568D0011D43A /* characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9108FD22D2568D0011D43A /* characters.swift */; };
+		8B91090022D258680011D43A /* creators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9108FF22D258680011D43A /* creators.swift */; };
+		8B91090222D264D70011D43A /* events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91090122D264D70011D43A /* events.swift */; };
+		8B91090422D2656B0011D43A /* series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91090322D2656B0011D43A /* series.swift */; };
+		8B91090622D2661D0011D43A /* stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91090522D2661D0011D43A /* stories.swift */; };
+		8BE297DA22D2BA6000761B6B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE297D922D2BA6000761B6B /* DetailsViewController.swift */; };
 		8BFF76B522D0DA150083D0FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF76B422D0DA150083D0FF /* AppDelegate.swift */; };
 		8BFF76B722D0DA150083D0FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF76B622D0DA150083D0FF /* ViewController.swift */; };
 		8BFF76BA22D0DA150083D0FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFF76B822D0DA150083D0FF /* Main.storyboard */; };
@@ -29,12 +36,19 @@
 		0F2C71CB9A0D31D80BAD60A7 /* Pods_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1FBC8522D16F1D0090F02E /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		8B1FBC8722D1737C0090F02E /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
+		8B3674DC22DD55C9001772F6 /* MarvelCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCalculatorViewModel.swift; sourceTree = "<group>"; };
 		8B3805EB22D1021500E31135 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B84FD0222D10864001A17A1 /* StringHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHandlers.swift; sourceTree = "<group>"; };
 		8B84FD0522D109D8001A17A1 /* RequestHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandlers.swift; sourceTree = "<group>"; };
 		8B84FD0722D10B9A001A17A1 /* WebServicesAddresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesAddresses.swift; sourceTree = "<group>"; };
 		8B84FD0922D119B9001A17A1 /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
-		8B84FD0B22D16887001A17A1 /* SessionVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionVariable.swift; sourceTree = "<group>"; };
+		8B84FD0B22D16887001A17A1 /* MarvelObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelObj.swift; sourceTree = "<group>"; };
+		8B9108FD22D2568D0011D43A /* characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characters.swift; sourceTree = "<group>"; };
+		8B9108FF22D258680011D43A /* creators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creators.swift; sourceTree = "<group>"; };
+		8B91090122D264D70011D43A /* events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = events.swift; sourceTree = "<group>"; };
+		8B91090322D2656B0011D43A /* series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = series.swift; sourceTree = "<group>"; };
+		8B91090522D2661D0011D43A /* stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stories.swift; sourceTree = "<group>"; };
+		8BE297D922D2BA6000761B6B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8BFF76B122D0DA150083D0FF /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFF76B422D0DA150083D0FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFF76B622D0DA150083D0FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,13 +84,59 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		8B84FD0422D109BC001A17A1 /* sync */ = {
+		8B3674DE22DD5677001772F6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8BFF76B822D0DA150083D0FF /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8B3674DF22DD5686001772F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BFF76B622D0DA150083D0FF /* ViewController.swift */,
+				8BFF76C622D0EAF90083D0FF /* CalculatorViewController.swift */,
+				8B1FBC8522D16F1D0090F02E /* ContentViewController.swift */,
+				8BE297D922D2BA6000761B6B /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8B3674E022DD569C001772F6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8B1FBC8722D1737C0090F02E /* ContentTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		8B84FD0422D109BC001A17A1 /* api_client */ = {
 			isa = PBXGroup;
 			children = (
 				8B84FD0522D109D8001A17A1 /* RequestHandlers.swift */,
 				8B84FD0722D10B9A001A17A1 /* WebServicesAddresses.swift */,
 			);
-			path = sync;
+			path = api_client;
+			sourceTree = "<group>";
+		};
+		8BE297D722D2A69F00761B6B /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				8B84FD0B22D16887001A17A1 /* MarvelObj.swift */,
+				8B3674DC22DD55C9001772F6 /* MarvelCalculatorViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		8BE297D822D2B02500761B6B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8B3674E022DD569C001772F6 /* TableViewCells */,
+				8B3674DF22DD5686001772F6 /* ViewControllers */,
+				8B3674DE22DD5677001772F6 /* Storyboards */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		8BFF76A822D0DA150083D0FF = {
@@ -100,18 +160,15 @@
 		8BFF76B322D0DA150083D0FF /* calculator */ = {
 			isa = PBXGroup;
 			children = (
-				8B84FD0422D109BC001A17A1 /* sync */,
+				8BE297D822D2B02500761B6B /* views */,
+				8BE297D722D2A69F00761B6B /* viewmodels */,
+				8B84FD0422D109BC001A17A1 /* api_client */,
 				8BFF76CB22D0F6170083D0FF /* models */,
 				8BFF76C822D0F4ED0083D0FF /* common */,
 				8BFF76B422D0DA150083D0FF /* AppDelegate.swift */,
-				8BFF76B622D0DA150083D0FF /* ViewController.swift */,
-				8BFF76B822D0DA150083D0FF /* Main.storyboard */,
 				8BFF76BB22D0DA170083D0FF /* Assets.xcassets */,
 				8BFF76BD22D0DA170083D0FF /* LaunchScreen.storyboard */,
 				8BFF76C022D0DA170083D0FF /* Info.plist */,
-				8BFF76C622D0EAF90083D0FF /* CalculatorViewController.swift */,
-				8B1FBC8522D16F1D0090F02E /* ContentViewController.swift */,
-				8B1FBC8722D1737C0090F02E /* ContentTableViewCell.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -121,7 +178,6 @@
 			children = (
 				8BFF76C922D0F5070083D0FF /* MultipleChecker.swift */,
 				8B84FD0222D10864001A17A1 /* StringHandlers.swift */,
-				8B84FD0B22D16887001A17A1 /* SessionVariable.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -131,6 +187,11 @@
 			children = (
 				8BFF76CC22D0F62C0083D0FF /* MultipleResult.swift */,
 				8B84FD0922D119B9001A17A1 /* Comics.swift */,
+				8B9108FD22D2568D0011D43A /* characters.swift */,
+				8B9108FF22D258680011D43A /* creators.swift */,
+				8B91090122D264D70011D43A /* events.swift */,
+				8B91090322D2656B0011D43A /* series.swift */,
+				8B91090522D2661D0011D43A /* stories.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -261,13 +322,20 @@
 			files = (
 				8BFF76B722D0DA150083D0FF /* ViewController.swift in Sources */,
 				8B84FD0322D10864001A17A1 /* StringHandlers.swift in Sources */,
-				8B84FD0C22D16887001A17A1 /* SessionVariable.swift in Sources */,
+				8B91090422D2656B0011D43A /* series.swift in Sources */,
+				8B91090022D258680011D43A /* creators.swift in Sources */,
+				8B84FD0C22D16887001A17A1 /* MarvelObj.swift in Sources */,
+				8B9108FE22D2568D0011D43A /* characters.swift in Sources */,
 				8BFF76CA22D0F5070083D0FF /* MultipleChecker.swift in Sources */,
 				8BFF76CD22D0F62C0083D0FF /* MultipleResult.swift in Sources */,
 				8BFF76C722D0EAF90083D0FF /* CalculatorViewController.swift in Sources */,
 				8B84FD0822D10B9A001A17A1 /* WebServicesAddresses.swift in Sources */,
+				8B91090222D264D70011D43A /* events.swift in Sources */,
+				8BE297DA22D2BA6000761B6B /* DetailsViewController.swift in Sources */,
 				8B84FD0622D109D8001A17A1 /* RequestHandlers.swift in Sources */,
+				8B3674DD22DD55C9001772F6 /* MarvelCalculatorViewModel.swift in Sources */,
 				8B1FBC8622D16F1D0090F02E /* ContentViewController.swift in Sources */,
+				8B91090622D2661D0011D43A /* stories.swift in Sources */,
 				8BFF76B522D0DA150083D0FF /* AppDelegate.swift in Sources */,
 				8B84FD0A22D119B9001A17A1 /* Comics.swift in Sources */,
 				8B1FBC8822D1737C0090F02E /* ContentTableViewCell.swift in Sources */,

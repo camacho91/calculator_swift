@@ -27,4 +27,68 @@ public class StringHandlers{
         return digestData
     }
     
+    public static func EvaluatesignRule(equationValue: String) -> String{
+        var EvaluatedOutput: String = equationValue
+        
+        if (EvaluatedOutput.contains("++")){
+            EvaluatedOutput = EvaluatedOutput.replacingOccurrences(of: "++", with: "+")
+        }
+        if (EvaluatedOutput.contains("--")){
+            EvaluatedOutput = EvaluatedOutput.replacingOccurrences(of: "--", with: "+")
+        }
+        if (EvaluatedOutput.contains("+-")){
+            EvaluatedOutput = EvaluatedOutput.replacingOccurrences(of: "+-", with: "-")
+        }
+        if (EvaluatedOutput.contains("-+")){
+            EvaluatedOutput = EvaluatedOutput.replacingOccurrences(of: "-+", with: "-")
+        }
+        if (EvaluatedOutput.contains(" ")){
+            EvaluatedOutput = EvaluatedOutput.replacingOccurrences(of: " ", with: "")
+        }
+        if (EvaluatedOutput.contains("**")){
+            EvaluatedOutput = EvaluatedOutput.replacingOccurrences(of: "**", with: "*")
+        }
+        if (EvaluatedOutput.contains("//")){
+            EvaluatedOutput = EvaluatedOutput.replacingOccurrences(of: "//", with: "/")
+        }
+        return EvaluatedOutput
+    }
+    
+    public static func EvaluateParenthesisRule(equationValue: String) -> Bool{
+         var EvaluatedOutput: String = equationValue
+        
+        if (EvaluatedOutput.contains("(") || EvaluatedOutput.contains(")")){
+            
+            let openingParenthesisCount = EvaluatedOutput.characters.filter { $0 == "(" }.count
+            let ClosingParenthesisCount = EvaluatedOutput.characters.filter { $0 == ")" }.count
+            if (openingParenthesisCount == ClosingParenthesisCount){
+                return true
+            }else{
+                return false
+            }
+            
+        }
+        
+        return true
+    }
+    
+    public static func ValidateEquation(equationValue: String) -> Bool{
+        var EvaluatedOutput: String = equationValue
+        
+        let validationpoint = NSCharacterSet.letters
+        
+        
+        let range = EvaluatedOutput.rangeOfCharacter(from: validationpoint)
+        
+       
+        if let test = range {
+            return true
+        }
+        else {
+            return false
+        }
+        
+        
+    }
+    
 }

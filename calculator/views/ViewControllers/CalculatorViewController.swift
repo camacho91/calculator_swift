@@ -10,9 +10,17 @@ import UIKit
 
 
 var comicList: [comics] = []
+var characterList: [characters] = []
+var creatorList: [creators] = []
+var eventList: [events] = []
+var seriesList: [series] = []
+var storiesList: [stories] = []
+
+var marvelViewModelObj = MarvelCalculatorViewModel(apiClientHandler: RequestHandlers())
+
 
 class CalculatorViewController: UIViewController {
-
+    
     @IBOutlet weak var vwCalculatorContainer: UIView!
     @IBOutlet weak var txtEquation: UITextField!
     @IBOutlet weak var txtOutPut: UILabel!
@@ -29,14 +37,39 @@ class CalculatorViewController: UIViewController {
         
     }
     
-    
-    
-    @IBAction func click_event(_ sender: Any) {
+    func Validation(){
         
         let content = txtEquation.text
         
-        CalculateValue(value: content!)
+        let containsString = StringHandlers.ValidateEquation(equationValue: content!)
         
+        
+        if (containsString == true){
+            showModalMessage(messageContent: "Your equation cannot contains letters", messageTitle: "Error")
+            
+            return
+        }
+        
+        if (txtEquation.text!.isEmpty){
+            showModalMessage(messageContent: "Invalid Equation", messageTitle: "Error")
+            
+            return
+        }
+        
+        let evaluatedEquationSignRule = StringHandlers.EvaluatesignRule(equationValue: content!)
+        let isValidEquation = StringHandlers.EvaluateParenthesisRule(equationValue: evaluatedEquationSignRule)
+        
+        if (isValidEquation == true){
+            CalculateValue(value: evaluatedEquationSignRule)
+        }else{
+            txtOutPut.text = "Invalid Equation"
+        }
+        
+    }
+    
+    @IBAction func click_event(_ sender: Any) {
+       
+        Validation()
     }
     
     
@@ -48,6 +81,7 @@ class CalculatorViewController: UIViewController {
     }
     
     
+    // MARK:  Perform Calculation for the equation
     func CalculateValue(value: String){
         
         MultipleChecker.resetValue()
@@ -59,39 +93,28 @@ class CalculatorViewController: UIViewController {
         txtOutPut.text = String(format: "Result: %@", String(mathValue!))
         
         _ = MultipleChecker.CheckMultiple(value: mathValue!)
-   
+        marvelViewModelObj.MarvelData.removeAll()
         
+        marvelViewModelObj.GetMarvelAPIResults()
         
-      
-        RequestHandlers.getComics() { result in
-            
-                
-                let stringValue = String(describing: result)
-                //let newString = stringValue.replacingOccurrences(of: "\\", with: "")
-                let somedata = Data(stringValue.utf8)
-                
-                
-                let serializedObject = try! JSONDecoder().decode(GeneralClass.self, from: somedata )
-              
-                for word in serializedObject.data.results {
-                    let data = comics(_title: word.title, _id: word.id)
-                    comicList.append(data)
-                }
-            
-                self.performSegueToContent()
+        marvelViewModelObj.loadingFinished = {
+            self.performSegueToContent()
             
         }
-       
         
+       
     }
     
     func performSegueToContent(){
         performSegue(withIdentifier: "segueContent", sender: self)
         
     }
-    
-    
-    
+    func showModalMessage(messageContent: String, messageTitle: String){
+        let alert = UIAlertController(title: messageTitle, message: messageContent, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
     
 
 }

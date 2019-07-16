@@ -13,15 +13,15 @@ import UIKit
 struct GeneralClass : Decodable{
     let code: Int
     let status: String
-    let data: data
+    let data: ComicData
 }
 
-struct data : Decodable{
+struct ComicData : Decodable{
     
-    let results :[results]
+    let results :[ComicResults]
 }
 
-struct results : Decodable{
+struct ComicResults : Decodable{
     let id: Int
     let title: String
 }

@@ -13,10 +13,10 @@ class ContentTableViewCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
   
     
-    func setupContent(comic: comics){
-        lblName.text = comic.title
+    func setupContent(title: String?){
+        lblName.text = title
     }
-
+    
 }
 
 
